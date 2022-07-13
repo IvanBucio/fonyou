@@ -1,0 +1,17 @@
+#localhost:8080/alumno/new
+
+{
+    "nombre":"Alumno Colombia",
+    "edad": 22,
+    "zonaHoraria":"2022-01-01T22:22:22",
+    "ciudad":"Bogota",
+    "id": 1
+}
+
+{
+    "nombre":"Alumno Argentino",
+    "edad": 20,
+    "zonaHoraria":"2022-01-01T09:11:11",
+    "ciudad":"Buenos Aires",
+    "id": 2
+}

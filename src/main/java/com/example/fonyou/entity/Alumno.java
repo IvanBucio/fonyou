@@ -1,8 +1,8 @@
 package com.example.fonyou.entity;
 
 import java.io.Serializable;
+import java.util.Date;
 import java.util.List;
-import java.util.TimeZone;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -10,6 +10,8 @@ import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import lombok.Data;
 
@@ -32,7 +34,8 @@ public class Alumno implements Serializable {
 	private String ciudad;
 	
 	@Column
-	private TimeZone zonaHoraria;
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date zonaHoraria;
 	
 	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "id")
 	private List<PreguntaAplicada> preguntaAplicada;
